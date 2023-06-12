@@ -1,0 +1,55 @@
+main {
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main div.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 40%;
+  padding: 5rem 0;
+}
+
+main form {
+  width: 70%;
+}
+
+form button {
+  padding: 1rem 2rem;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 1rem;
+  background-color: #3747ff;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+}
+
+div#register {
+  width: 50%;
+  padding: 2rem 0;
+}
+
+div#register form {
+  width: 90%;
+}
+
+div#register form .containerForm {
+  display: flex;
+  gap: 5rem;
+  flex-direction: row;
+  width: 100%;
+}
+
+div#register .left, div#register .right {
+  width: 90%;
+}
+
+.left div, .right div {
+  position: relative;
+}

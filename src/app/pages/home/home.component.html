@@ -1,0 +1,57 @@
+<main>
+
+  <header>
+    <h1><span>Master</span> Tasks</h1>
+    <div>
+      <a routerLink="/user/login" class="btn" *ngIf="!permission; else exit">Entrar</a>
+    </div>
+  </header>
+
+  <article *ngIf="permission; else requireLogin">
+
+    <section class="container">
+        <form action="">
+
+          <div>
+            <app-input-form
+              name="title"
+              type="text"
+            ></app-input-form>
+          </div>
+
+          <div class="secondArea">
+            <div class="dates">
+              <app-input-form
+                title="Data de inicio"
+                name="dt_start"
+                type="date"
+              ></app-input-form>
+
+              <app-input-form
+                title="Data de termino"
+                name="dt_to_end"
+                type="date"
+              ></app-input-form>
+            </div>
+
+            <button type="submit" class="btn"><img src="../../../assets/check.svg" alt=""></button>
+          </div>
+
+
+        </form>
+    </section>
+
+    <app-task-card></app-task-card>
+    <app-task-card></app-task-card>
+
+  </article>
+
+</main>
+
+<ng-template #requireLogin>
+  <h1 class="requiredLogin">FAÇA O LOGIN</h1>
+</ng-template>
+
+<ng-template #exit>
+  <a routerLink="/user/login" class="btn">Sair</a>
+</ng-template>

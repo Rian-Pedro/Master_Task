@@ -1,0 +1,16 @@
+.error-msg {
+  background-color: rgb(27, 27, 27);
+  padding: .5rem;
+  font-weight: bold;
+  text-decoration: double;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  top: calc(100% + 10px);
+  z-index: 1;
+}
+
+.error-msg span {
+  color: #8e0000;
+}

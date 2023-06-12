@@ -1,0 +1,5 @@
+<div>
+  <label [for]="name" *ngIf="title">{{title}}:</label>
+  <input [type]="type" [name]="name" [id]="name">
+  <app-error-msg [msg]="msgError" style="display: none;"></app-error-msg>
+</div>

@@ -1,0 +1,24 @@
+div.card-content {
+  width: 70%;
+}
+
+section.task{
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin: 1rem auto;
+}
+
+div.card-content div {
+  margin-left: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.edit {
+  color: #00fbff;
+}
+
+.remove {
+  color: #232323;
+}

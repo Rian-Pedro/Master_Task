@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  background: rgb(0,0,0);
+  background: linear-gradient(60deg, #84407b 0%, #4acabb 61%, #fcf9c2 100%);
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+section.container {
+  padding: 2rem;
+  width: 50%;
+}
+
+.container {
+  background-color: #ffffff2b;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  box-shadow: 0 5px 15px rgba(0,212,255,1);
+  background-color: rgba(9,9,121,1);
+  text-decoration: underline;
+  color: #fff;
+}
+
+p {
+  margin-bottom: 0;
+}
