@@ -1,16 +1,16 @@
 <section class="container task">
 
   <div class="card-content">
-    <h1>teste</h1>
+    <h1>{{task.title}}</h1>
     <div>
-      <p>De: 17/03/23</p>
-      <p>Até: 20/03/23</p>
+      <p>De: {{task.dt_start}}</p>
+      <p>Até: {{task.dt_to_end}}</p>
     </div>
   </div>
 
   <div class="options">
     <p class="edit">Editar</p>
-    <p class="remove">Excluir</p>
+    <p class="remove" (click)="option($event)">Excluir</p>
   </div>
 
 </section>

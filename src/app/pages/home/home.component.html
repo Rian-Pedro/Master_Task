@@ -10,7 +10,7 @@
   <article *ngIf="permission; else requireLogin">
 
     <section class="container">
-        <form action="">
+        <form action="" (submit)="submitEvent($event)">
 
           <div>
             <app-input-form
@@ -41,17 +41,19 @@
         </form>
     </section>
 
-    <app-task-card></app-task-card>
-    <app-task-card></app-task-card>
+    <app-task-card
+      *ngFor="let task of tasks"
+      [task]="task">
+    </app-task-card>
 
   </article>
 
 </main>
 
 <ng-template #requireLogin>
-  <h1 class="requiredLogin">FAÇA O LOGIN</h1>
+  <div class="custom-loader homeLoader"></div>
 </ng-template>
 
 <ng-template #exit>
-  <a routerLink="/user/login" class="btn">Sair</a>
+  <a routerLink="/user/login" class="btn" (click)="logout()">Sair</a>
 </ng-template>

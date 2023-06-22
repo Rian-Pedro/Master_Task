@@ -9,16 +9,31 @@ section.task{
   margin: 1rem auto;
 }
 
+.card-content h1 {
+  font-size: 2rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+}
+
 div.card-content div {
-  margin-left: 2rem;
   display: flex;
   gap: 2rem;
 }
 
 .edit {
-  color: #00fbff;
+  color: var(--Yellow);
 }
 
 .remove {
-  color: #232323;
+  color: #000000;
+}
+
+@media (max-width: 700px) {
+  section.task {
+    width: 90%;
+    gap: 3rem;
+    /* flex-direction: column; */
+  }
 }

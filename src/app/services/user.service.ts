@@ -18,17 +18,12 @@ export class UserService {
     return this.http.get(`https://api-task-aplication.onrender.com/login/?email=${userDatas.email}&password=${userDatas.password}&token=${userDatas.token}`)
   }
 
-  async registerUser(userDatas: {name: String, password: String, email: String}) {
-    await axios.post(`https://api-task-aplication.onrender.com/register/?name=${userDatas.name}&email=${userDatas.email}&password=${userDatas.password}`)
-          .then((response) => {
-            console.log(response.data);
-            if(response.data.errors.email) {
-              alert('email já cadastrado')
-            }
-          })
-          .catch((err) => {
-            console.log(err);
-          })
+  registerUser(userDatas: {name: String, password: String, email: String}) {
+    return this.http.post('https://api-task-aplication.onrender.com/register', userDatas);
+  }
+
+  deleteTask(id_task: string) {
+    return this.http.delete(`https://api-task-aplication.onrender.com/deleteTask/?id_task=${id_task}`);
   }
 
   getTasks(id_maker: string) {

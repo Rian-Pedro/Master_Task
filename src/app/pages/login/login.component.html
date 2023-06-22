@@ -1,59 +1,60 @@
 <main>
   <div class="container" *ngIf="permission; else register">
     <h1>Login</h1>
-    <form method="get" (submit)="submitEvent($event)">
+    <form method="get" (submit)="submitEvent($event)" class="visible">
 
       <app-input-form title="Email" name="email" type="text"></app-input-form>
 
       <app-input-form title="Senha" name="password" type="password"></app-input-form>
 
       <button type="submit">Entrar</button>
-
+      <a routerLink="/user/register">Registro</a>
     </form>
-
+    <div class="loader invisible">
+      <div class="custom-loader"></div>
+      <p>Aguarde</p>
+    </div>
   </div>
 </main>
 
 <ng-template #register>
   <div class="container" id="register">
     <h1>Register</h1>
-    <form method="post" (submit)="submitEvent($event)">
+    <form method="post" (submit)="submitEvent($event)" class="visible">
 
       <div class="containerForm">
         <div class="left">
           <div>
-            <!-- <label for="">Nome:</label>
-            <input type="text" name="name" id="name"> -->
             <app-input-form title="Nome" name="name" type="text" msgError="campo obrigatorio"></app-input-form>
           </div>
 
           <div>
-            <!-- <label for="">Email:</label>
-            <input type="text" name="email" id="email">
-            <app-error-msg msg="campo obrigatorio" style="display: none;"></app-error-msg> -->
             <app-input-form title="Email" name="email" type="text" msgError="campo obrigatorio"></app-input-form>
           </div>
         </div>
 
         <div class="right">
           <div>
-            <!-- <label for="">Senha:</label>
-            <input type="password" name="password" id="password">
-            <app-error-msg msg="precisa ter no minimo 6 caracteres" style="display: none;"></app-error-msg> -->
             <app-input-form title="Senha" name="password" type="password" msgError="precisa ter no minimo 6 caracteres"></app-input-form>
           </div>
 
           <div>
-            <!-- <label for="">Confirmar senha:</label>
-            <input type="password" name="confirm-password" id="confirm-password">
-            <app-error-msg msg="as senhas não coincidem" class="ete" style="display: none;"></app-error-msg> -->
             <app-input-form title="Confirmar senha" name="confirm-password" type="password" msgError="as senhas não coincidem"></app-input-form>
           </div>
         </div>
       </div>
 
       <button type="submit">Enviar</button>
-
+      <a routerLink="/user/login">Login</a>
     </form>
+
+    <div class="loader invisible">
+      <div class="custom-loader"></div>
+      <p>Aguarde</p>
+    </div>
+
   </div>
+</ng-template>
+
+<ng-template #loaderAnimation>
 </ng-template>

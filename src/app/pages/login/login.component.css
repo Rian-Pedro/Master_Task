@@ -3,6 +3,7 @@ main {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 main div.container {
@@ -11,12 +12,29 @@ main div.container {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  width: 40%;
-  padding: 5rem 0;
+  width: 30%;
+  padding: 3rem 0;
+}
+
+div.container a {
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: .5rem 1rem;
 }
 
 main form {
   width: 70%;
+}
+
+form input {
+  width: 100%;
 }
 
 form button {
@@ -31,7 +49,7 @@ form button {
 }
 
 div#register {
-  width: 50%;
+  width: 55%;
   padding: 2rem 0;
 }
 
@@ -52,4 +70,21 @@ div#register .left, div#register .right {
 
 .left div, .right div {
   position: relative;
+}
+
+@media (max-width: 700px) {
+
+  main {
+    padding: 2rem 0rem;
+  }
+
+  main div.container, div#register {
+    width: 90% !important;
+  }
+
+  div#register .containerForm {
+    flex-direction: column !important;
+    gap: .5rem !important;
+    align-items: center;
+  }
 }
